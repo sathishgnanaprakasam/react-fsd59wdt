@@ -1,6 +1,16 @@
+const Hello = () => {
+  return <h1>Hello, World!</h1>
+}
+
 // Component: App
 const App = () => {
-  return <h1>Hello, World!</h1>
+  return (
+    <div>
+      <Hello />
+      <Hello />
+      <Hello />
+    </div>
+  )
 }
 
 export default App;
