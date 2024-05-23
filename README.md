@@ -13,3 +13,19 @@ git pull - Pull the changes from the remote repository
 git log - View the commit history
 git branch - List all the branches in the repository
 git checkout branchname/commit ID - Switch to a different branch / commit
+
+#### React- Day -3: React hooks & states
+
+### Contents:
+
+-[x] Working with array lists  
+-[x] Usage of keys  
+-[x] Conditional rendering  
+-[ ] Handling Events  
+-[ ] Props vs State
+
+render: insert the element into the DOM
+
+Conditional Rendering:
+
+to render a component based on a condition
