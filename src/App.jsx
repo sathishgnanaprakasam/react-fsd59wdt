@@ -1,3 +1,5 @@
+import './App.css';
+
 const App = () => {
 
   const handleChange = (e) => {
@@ -6,7 +8,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>React App</h1>
+      <h1 className="header">React App</h1>
       <input 
         type="text"
         onChange={handleChange}
