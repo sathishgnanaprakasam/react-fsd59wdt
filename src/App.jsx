@@ -1,11 +1,24 @@
+import Todo from "./components/Todo";
+
 const App = () => {
 
-  const isLoggedIn = false;
+  const todos = [
+    { id: 1, title: 'Buy milk', completed: false },
+    { id: 2, title: 'Buy bread', completed: true },
+    { id: 3, title: 'Buy butter', completed: false },
+  ]
 
   return (
     <div>
-      {isLoggedIn && <h1>Welcome back!</h1>}
-      {!isLoggedIn && <h1>Please login!</h1> }
+      <h1>Todo List</h1>
+      {
+        todos.map(todo => 
+          <Todo 
+            key={todo.id}
+            todo={todo}
+          />
+        )
+      }
     </div>
   )
 }
