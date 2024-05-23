@@ -1,24 +1,13 @@
-import Todo from "./components/Todo";
-
 const App = () => {
 
-  const todos = [
-    { id: 1, title: 'Buy milk', completed: true },
-    { id: 2, title: 'Buy bread', completed: true },
-    { id: 3, title: 'Buy butter', completed: false },
-  ]
+  const handleClick = () => {
+    console.log('Button Clicked!');
+  }
 
   return (
     <div>
-      <h1>Todo List</h1>
-      {
-        todos.map(todo => 
-          <Todo 
-            key={todo.id}
-            todo={todo}
-          />
-        )
-      }
+      <h1>React App</h1>
+      <button onClick={handleClick}>Click Me!</button>
     </div>
   )
 }

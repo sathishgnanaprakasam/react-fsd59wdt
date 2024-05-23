@@ -21,7 +21,7 @@ git checkout branchname/commit ID - Switch to a different branch / commit
 -[x] Working with array lists  
 -[x] Usage of keys  
 -[x] Conditional rendering  
--[ ] Handling Events  
+-[x] Handling Events  
 -[ ] Props vs State
 
 render: insert the element into the DOM
