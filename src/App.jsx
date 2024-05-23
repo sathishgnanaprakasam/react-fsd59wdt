@@ -1,13 +1,10 @@
-const Hello = () => {
-  return <h1>Hello, World!</h1>
-}
+import Hello from "./components/Hello";
 
 // Component: App
 const App = () => {
   return (
     <div>
-      <Hello />
-      <Hello />
+      <h1>Greetings</h1>
       <Hello />
     </div>
   )
