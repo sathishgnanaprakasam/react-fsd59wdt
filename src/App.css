@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* set the background color as a linear gradient #0166E7 to #B4D7FE */
+    background: linear-gradient(to right, #0166E7, #B4D7FE);
+}
