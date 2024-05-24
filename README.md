@@ -6,9 +6,9 @@
 
 -[x] Components - In-depth  
 -[ ] Component life cycle  
--[ ] Stateful and stateless components  
--[ ] Reusable components  
--[ ] Passing dynamic data to component  
+-[x] Stateful and stateless components  
+-[x] Reusable components  
+-[x] Passing dynamic data to component  
 -[ ] Introduction to Hook
 
 Components: Can be created in two ways:
@@ -30,3 +30,10 @@ Components: Can be created in two ways:
 - Functional components can be better optimized by React.
 - Functional components are less code.
 - Functional components are faster than class components.
+
+state:
+
+- a component's memory.
+- a component's memory is used to store data.
+- a component's memory is used to store data that may change over time.
+- changes in state cause the component to re-render.

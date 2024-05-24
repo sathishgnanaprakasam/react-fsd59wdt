@@ -1,39 +1,33 @@
-// Functional Component with arrow function
-// const App = () => {
-//   return (
-//     <div>
-//       <h1>My React App</h1>
-//     </div>
-//   )
-// }
+import React, { Component } from 'react';
 
-// export default App;
+export class App extends Component {
 
-// Functional Component with function
-// function App() {
-//   return (
-//     <div>
-//       <h1>My React App</h1>
-//     </div>
-//   )
-// }
+  constructor(props) {
+    super(props); // Call the constructor of the parent class
 
-// export default App;
+    // set the initial state
+    this.state = {
+      counter: 0
+    }
+  }
 
-// Class Component
+  handleIncrement = () => {
+    if (this.state.counter < 10) {
+      // update the state using the setState method
+      this.setState({
+        counter: this.state.counter + 1
+      });
+    }
+  }
 
-import { Component } from "react";
-import Hello from "./components/Hello";
-
-class App extends Component {
-  // override the render method
   render() {
-    // return JSX
+
+    console.log(this.state);
+
     return (
       <div>
-        <Hello 
-          name="John"
-        />
+        <p>Count: {this.state.counter}</p>
+        <button onClick={this.handleIncrement}>Increment</button>
       </div>
     )
   }
