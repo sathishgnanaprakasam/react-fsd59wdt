@@ -1,9 +1,12 @@
 import { Component } from "react";
 
 class Hello extends Component {
-  render() {
+    render() {
+      
+        console.log(this.props);
+
     return (
-      <h1>Hello World</h1>
+        <h1>Hello {this.props.name}!</h1>
     )
   }
 }
