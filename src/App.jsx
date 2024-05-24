@@ -23,14 +23,7 @@
 // Class Component
 
 import { Component } from "react";
-
-class Hello extends Component {
-  render() {
-    return (
-      <h1>Hello World</h1>
-    )
-  }
-}
+import Hello from "./components/Hello";
 
 class App extends Component {
   // override the render method
