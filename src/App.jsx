@@ -3,14 +3,18 @@ import { useEffect, useState } from "react";
 const App = () => {
 
   let [count, setCount] = useState(0);
+  let [increment, setIncrement] = useState(0);
 
-  // runs only once when the component is mounted
+  // runs when the component is mounted and count is updated
   useEffect(() => {
-    console.log('Component mounted');
-  }, []);
+    console.log('useEffect called');
+    console.log('Count:', count);
+    console.log('Increment:', increment);
+  }, [count]);
 
   const handleIncrement = () => {
-    setCount(count + 1);
+    // setCount(count + 1);
+    setIncrement(increment + 1);
   }
 
   const handleDecrement = () => {
