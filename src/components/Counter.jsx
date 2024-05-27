@@ -1,6 +1,13 @@
-const Counter = ({ count }) => {
+import History from '../components/History';
+
+const Counter = ({ count, history }) => {
   return (
-      <h1>Counter: {count}</h1>
+      <div>
+        <h1>Counter: {count}</h1>
+          <History 
+            history={history}
+        />
+      </div>
   )
 }
 
