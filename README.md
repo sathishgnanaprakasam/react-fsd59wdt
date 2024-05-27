@@ -2,8 +2,18 @@
 
 ## Contents:
 
--[ ] What is the hook?  
--[ ] Lifecycle of Hook  
+-[x] What is the hook?
+
+      - hooks are functions that let you “hook into” React state and lifecycle features from function components.
+      - Hooks don’t work inside classes — they let you use React without classes.
+      - examples: useState, useEffect, useContext, useReducer, useRef
+
+-[x] Lifecycle of a component
+
+      - Mounting: When an instance of a component is being created and inserted into the DOM.
+      - Updating: When a component is being re-rendered as a result of changes to either its props or state.
+      - Unmounting: When a component is being removed from the DOM.
+
 -[ ] useState, useEffect
 
 - [ ] Props drilling
