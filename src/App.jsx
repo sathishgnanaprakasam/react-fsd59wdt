@@ -1,39 +1,20 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Counter from "./components/Counter";
 
 const App = () => {
 
-  let [count, setCount] = useState(0);
-  let [history, setHistory] = useState([]);
+  const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    console.log(history);
-  }, [history]);
-
-  const handleIncrement = () => {
-    setCount(count + 1);
-    setHistory([...history, 'I']);
-  }
-
-  const handleDecrement = () => {
-    setCount(count - 1);
-    setHistory([...history, 'D']);
-  }
-
-  const handleReset = () => {
-    setCount(0);
-    setHistory([...history, 'R']);
+  const handleCountChange = (value) => {
+    setCount(value);
   }
 
   return (
     <div>
+      <h1>Counter: {count}</h1>
       <Counter 
-        count={count}
-        history={history}
+        onCountChange={handleCountChange}
       />
-      <button onClick={handleIncrement}>Increment</button>
-      <button onClick={handleDecrement}>Decrement</button>
-      <button onClick={handleReset}>Reset</button>
     </div>
   )
 }
