@@ -6,6 +6,7 @@
 
       - hooks are functions that let you “hook into” React state and lifecycle features from function components.
       - Hooks don’t work inside classes — they let you use React without classes.
+      - Hooks starts with `use` keyword.
       - examples: useState, useEffect, useContext, useReducer, useRef
 
 -[x] Lifecycle of a component
