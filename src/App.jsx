@@ -1,23 +1,34 @@
-// passing data from App to Bin component (Parent to Child)
+// passing data from Bin to App
 
-const Bin = ({ user }) => {
+import { useState } from "react";
+
+const Bin = ({ sendData }) => {
+
+  const loggedInUser = 'John Doe';
+
   return (
     <div>
-      <p>Logged in User: { user }</p>
+      <h1>Data from Bin to App</h1>
+      <p>Data in Bin: {loggedInUser}</p>
+      <button onClick={() => { sendData(loggedInUser) }}>Send Data</button>
     </div>
   )
 }
 
 const App = () => {
 
-  const loggedInUser = 'John Doe';
+  const [user, setUser]  = useState('');
+
+  const receiveData = (loggedInUser) => {
+    setUser(loggedInUser);
+  }
 
   return (
     <div>
-      <h1>Data from App to Bin</h1>
       <Bin 
-        user={loggedInUser}
+        sendData={receiveData}
       />
+      <p>Data in App: {user}</p>
     </div>
   )
 }
