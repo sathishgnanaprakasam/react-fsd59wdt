@@ -18,6 +18,10 @@ React Router solves these problems by providing a `BrowserRouter` component, whi
 
 -[ ] BrowserRouter, Switch, Link, Route, URL params
 
+- BrowserRouter: It is a component that wraps the application and provides routing capabilities to the application.
+- createBrowserRouter: It is a function that creates a BrowserRouter instance.
+- Outlet: It is a component that renders the matched route's component.
+
 session task on the admin dashboard
 https://startbootstrap.com/previews/sb-admin-2
 
