@@ -1,19 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import noteServices from "../services/noteServices";
 
 const Home = () => {
 
-  const [notes, setNotes] = useState([
-    {
-      id: 1,
-      title: "First Note",
-      content: "This is the first note"
-    },
-    {
-      id: 2,
-      title: "Second Note",
-      content: "This is the second note",
-    },
-  ])
+  const [notes, setNotes] = useState([]);
+
+  useEffect(() => {
+    noteServices.getNotes()
+      .then(notes => setNotes(notes));
+  }, []);
+
+  console.log(notes);
 
   return (
     <div>
@@ -21,7 +19,7 @@ const Home = () => {
       <ul>
         {notes.map(note => (
           <li key={note.id}>
-            <a href={`/${note.id}`}>{note.title}</a>
+            <Link to={`/notes/${note.id}`}>{note.title}</Link>
           </li>
         ))}
       </ul>
