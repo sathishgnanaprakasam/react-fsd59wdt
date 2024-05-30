@@ -1,17 +1,15 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import noteServices from "../services/noteServices";
+
+export const loader = async () => {
+  const notes = await noteServices.getNotes();
+  return notes;
+}
 
 const Home = () => {
 
-  const [notes, setNotes] = useState([]);
-
-  useEffect(() => {
-    noteServices.getNotes()
-      .then(notes => setNotes(notes));
-  }, []);
-
-  console.log(notes);
+  const notes = useLoaderData();
 
   return (
     <div>
