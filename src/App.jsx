@@ -1,6 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home, { loader as notesLoader } from "./pages/Home";
 import Note from "./pages/Note";
+import Users, { userLoader } from "./pages/Users";
+import User, { usrLoader } from "./pages/User";
 
 // create a router
 const router = createBrowserRouter([
@@ -13,6 +15,16 @@ const router = createBrowserRouter([
     path: "/notes/:id",
     element: <Note />,
     loader: notesLoader
+  },
+  {
+    path: "/users",
+    element: <Users />,
+    loader: userLoader
+  },
+  {
+    path: "/users/:id",
+    element: <User />,
+    loader: usrLoader
   }
 ]);
 
