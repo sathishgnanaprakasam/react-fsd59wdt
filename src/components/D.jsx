@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { NameContext } from "../App";
 
-const D = () => {
+const D = ({ children }) => {
 
     // 3. Use the context in the component
     const { name, setName } = useContext(NameContext);
@@ -12,7 +12,12 @@ const D = () => {
         }, 5000);
     })
 
-    return <h1>Hello, { name }!</h1>
+    return (
+        <div>
+            <h1>Hello, {name}!</h1>
+            {children}
+        </div>
+    )
 }
 
 export default D;
