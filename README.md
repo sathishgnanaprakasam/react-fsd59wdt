@@ -1,3 +1,6 @@
-# React + Vite
+# React- Day -9: useRef & useReducer
 
-This is a `React + Vite project` created for the batch `FSD59WD-T` to demonstrate the concepts of React.
+## Contents:
+
+-[ ] useRef, useReducer  
+-[ ] Front end game demonstration - hangman / tictactoe / tile match
