@@ -1,34 +1,30 @@
 import { useRef, useState } from "react";
 
-// Component: App
 const App = () => {
 
   const [state, setState] = useState(0);
+  const countRef = useRef(0);
 
-  // create a reference using useRef hook
-  const inputRef = useRef(null);
-
-  const handleClick = () => {
-    // Focus the input element here
-    // console.log(inputRef.current.value);
-    inputRef.current.focus();
+  const handleRefIncrement = () => {
+    countRef.current += 1;
+    console.log(countRef.current);
   }
 
-  const handleChange = () => {
-    inputRef.current.value = "Hello World"; // This will not trigger re-render
-    setState(state + 1); // This will trigger re-render
+  const handleStateIncrement = () => {
+    setState((prev) => {
+      console.log(prev);
+      return state + 1;
+    });
   }
 
-  console.log('rendering component'); // This will be called on every state change
+  console.log('component rendered');
 
   return (
     <>
-      <input 
-        type="text"
-        ref={inputRef}
-      />
-      <button onClick={handleClick}>Focus Input</button>
-      <button onClick={handleChange}>Change Value</button>
+      <h1>State Count: { state }</h1>
+      <h1>Ref Count: {countRef.current}</h1>
+      <button onClick={handleRefIncrement}>Increment Ref Count</button>
+      <button onClick={handleStateIncrement}>Increment State Count</button>
     </>
   )
 }
