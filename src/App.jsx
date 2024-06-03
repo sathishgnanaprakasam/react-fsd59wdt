@@ -1,7 +1,9 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 // Component: App
 const App = () => {
+
+  const [state, setState] = useState(0);
 
   // create a reference using useRef hook
   const inputRef = useRef(null);
@@ -12,6 +14,13 @@ const App = () => {
     inputRef.current.focus();
   }
 
+  const handleChange = () => {
+    inputRef.current.value = "Hello World"; // This will not trigger re-render
+    setState(state + 1); // This will trigger re-render
+  }
+
+  console.log('rendering component'); // This will be called on every state change
+
   return (
     <>
       <input 
@@ -19,6 +28,7 @@ const App = () => {
         ref={inputRef}
       />
       <button onClick={handleClick}>Focus Input</button>
+      <button onClick={handleChange}>Change Value</button>
     </>
   )
 }
