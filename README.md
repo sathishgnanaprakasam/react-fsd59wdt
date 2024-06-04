@@ -1,3 +1,13 @@
-# React + Vite
+# React- Day -9: useRef & useReducer
 
-This is a `React + Vite project` created for the batch `FSD59WD-T` to demonstrate the concepts of React.
+- [ ] Front end game demonstration - hangman / tictactoe / tile match
+
+# React- Day -10: Axios
+
+- [ ] Playing around with API
+- [ ] fetch() or Axios
+- [ ] Implementing simple CRUD
+
+## Task
+
+https://docs.google.com/document/d/1-qvT8VkH2Bvv16hYm-qNiwfusRSt9ACJmceJLpLV9x8/edit
