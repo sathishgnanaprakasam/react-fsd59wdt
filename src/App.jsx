@@ -1,10 +1,14 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Todos from "./pages/Todos";
+import { loader as todosLoader } from "./pages/Todos";
 
 // create a router object
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <h1>Hello World!!</h1>
+    element: <Todos />,
+    // link the loader function to the route
+    loader: todosLoader
   }
 ]);
 
