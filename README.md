@@ -4,7 +4,7 @@
 
 # React- Day -10: Axios
 
-- [ ] Playing around with API
+- [x] Playing around with API
 - [ ] fetch() or Axios
 - [ ] Implementing simple CRUD
 
