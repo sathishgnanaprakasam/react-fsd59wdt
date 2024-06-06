@@ -29,8 +29,9 @@ const TodoItem = ({ todo, onUpdateTodo }) => {
               onChange={handleCheckboxChange}
           />
           <span>
-              <strong>{todo.title}</strong><br /><em>{todo.description}</em>
+              <strong>{todo.title.toUpperCase()}</strong> : <em>{todo.description}</em>
           </span>
+          <br /><br />
     </div>
   )
 }
