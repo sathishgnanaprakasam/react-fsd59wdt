@@ -6,7 +6,7 @@ import { useState } from "react";
 // define a loader function
 export const loader = async () => {
     // make an async call to fetch data
-    const todos = await axios.get(`https://665eb6121e9017dc16f10996.mockapi.io/todos`);
+    const todos = await axios.get(`https://665eb6121e9017dc16f10996.mockapi.io/api/v1/todos`);
 
     // return the data
     return {todos: todos.data };
@@ -37,7 +37,7 @@ const Todos = () => {
         }
 
         // api call to create a new todo
-        const response = await axios.post(`https://665eb6121e9017dc16f10996.mockapi.io/todos`, newTodo);
+        const response = await axios.post(`https://665eb6121e9017dc16f10996.mockapi.io/api/v1/todos`, newTodo);
 
         if (response) {
             setTitle('');
@@ -51,6 +51,10 @@ const Todos = () => {
         }
     }
 
+    const handleDeleteTodo = async (id) => {
+        setTodos(todos.filter(todo => todo.id !== id));
+    }   
+
   return (
       <div>
         <h1>Todo List</h1>
@@ -60,6 +64,7 @@ const Todos = () => {
                     todo={todo}
                     key={todo.id}
                     onUpdateTodo={handleUpdateTodo}
+                    onDeleteTodo={handleDeleteTodo}
                 />
             ))
           }
