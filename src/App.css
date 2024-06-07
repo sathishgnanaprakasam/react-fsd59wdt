@@ -1,0 +1,32 @@
+.square {
+    border: 1px solid darkgray;
+    height: 75px;
+    width: 75px;
+    background-color: white;
+    font-size: 48px;
+    text-align: center;
+    color: cadetblue;
+    float: left;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row:first-child .square {
+    border-top: 0;
+}
+
+.row:nth-child(3) .square {
+    border-bottom: 0;
+}
+
+.square:first-child {
+    border-left: 0;
+}
+
+.square:nth-child(3) {
+    border-right: 0;
+}
